@@ -12,7 +12,6 @@ export const spacex = (() => {
     let bySuccessLanding = '';
 
     function init(){
-        console.log("spacex intiated");
         loadData(API_URL_FIRST_100);
         addEventListeners();
     }

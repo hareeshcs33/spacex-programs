@@ -1,0 +1,25 @@
+{
+  "name": "spacex-programs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hareeshcs33/spacex-programs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hareeshcs33/spacex-programs/issues"
+  },
+  "homepage": "https://github.com/hareeshcs33/spacex-programs#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}

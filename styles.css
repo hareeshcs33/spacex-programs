@@ -1,0 +1,105 @@
+/* styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+[class*=col-].left-side-block {
+    padding: 0;
+}
+
+.left-side-content {
+    background-color: #fff;
+    padding: 15px;
+}
+
+[class*=col-] {
+    padding: 0 7.5px;
+}
+
+@media (max-width: 576px) {
+    [class*=col-] {
+        padding: 0;
+    }
+}
+
+.launch-title {
+    border-bottom: 1px solid #a3a3a3;
+    margin: 0 15px 10px 15px;
+}
+
+.launch-cta {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.launch-cta .active-cta {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.launch-cta>div:nth-child(even) {
+    text-align: end;
+}
+
+.launch-cta>div {
+    padding: 0 2px;
+}
+
+.img-box {
+    border: 0;
+    margin: 0 auto 10px;
+    padding: 10px;
+}
+
+.img-box .mission-img {
+    display: block;
+    width: 100%;
+}
+
+.mission-ids ul {
+    margin-bottom: 0;
+}
+
+.mission-ids ul li {
+    color: #2187c1;
+    list-style-position: inside;
+}
+
+.card-title {
+    color: #2187c1;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.mission-ids label {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.label-value-block .label {
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.label-value-block .value {
+    color: #2187c1;
+    font-size: 13px;
+}

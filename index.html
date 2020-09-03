@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hareesh Sapparad">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="">
+    <title>spacex</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <h3>SpaceX launch programs</h3>
+        </header>
+        <main class="row m-0">
+            <aside class="col-12 col-sm-6 col-md-3 col-xl-2 rounded-lg left-side-block">
+                <div class="left-side-content mb-3">
+                    <h5>Filters</h5>
+                    <h6 class="launch-title text-center">Launch Year</h6>
+                    <div class="launch-cta mb-2 row m-0 launch-year-button-group">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2006</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2007</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2008</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2009</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2010</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2011</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2012</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2013</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2014</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2015</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2016</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2017</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2019</button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">2020</button>
+                        </div>
+                    </div>
+                    <h6 class="launch-title text-center">Successful Launch</h6>
+                    <div class="launch-cta mb-2 launch-success-button-group">
+                        <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">True</button>
+                        <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">False</button>
+                    </div>
+                    <h6 class="launch-title text-center">Successful Landing</h6>
+                    <div class="launch-cta mb-2 success-landing-button-group">
+                        <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">True</button>
+                        <button type="button" class="btn btn-sm btn-success px-4 px-sm-3 px-lg-4 py-1 mb-2">False</button>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-12 col-sm-6 col-md-9 col-xl-10 right-side-block pr-0">
+                <div class="row m-auto mx-sm-0" id="programs">
+                    Loading . . .
+                    <!-- <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 mb-3 border-0">
+                            <div class="card-header text-center img-box">
+                                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="img1" class="mission-img"/>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="card-title">DemoSat #2</div>
+                                <div class="mission-ids">
+                                    <label>Mission Ids:</label>
+                                    <ul>
+                                        <li>{list mission ids}</li>
+                                    </ul>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Launch Year:</label>
+                                    <span class="value">2006</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Launch:</label>
+                                    <span class="value">{Launch_success}</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Landing:</label>
+                                    <span class="value">{Launch Landing}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 border-0">
+                            <div class="card-header text-center img-box">
+                                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="img1" class="mission-img"/>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="card-title">DemoSat #2</div>
+                                <div class="mission-ids">
+                                    <label>Mission Ids:</label>
+                                    <ul>
+                                        <li>{list mission ids}</li>
+                                    </ul>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Launch Year:</label>
+                                    <span class="value">2006</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Launch:</label>
+                                    <span class="value">{Launch_success}</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Landing:</label>
+                                    <span class="value">{Launch Landing}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 mb-3 border-0">
+                            <div class="card-header text-center img-box">
+                                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="img1" class="mission-img"/>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="card-title">DemoSat #2</div>
+                                <div class="mission-ids">
+                                    <label>Mission Ids:</label>
+                                    <ul>
+                                        <li>{list mission ids}</li>
+                                    </ul>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Launch Year:</label>
+                                    <span class="value">2006</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Launch:</label>
+                                    <span class="value">{Launch_success}</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Landing:</label>
+                                    <span class="value">{Launch Landing}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 mb-3 border-0">
+                            <div class="card-header text-center img-box">
+                                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="img1" class="mission-img"/>
+                            </div>
+                            <div class="card-body p-0 border-0">
+                                <div class="card-title">DemoSat #2</div>
+                                <div class="mission-ids">
+                                    <label>Mission Ids:</label>
+                                    <ul>
+                                        <li>{list mission ids}</li>
+                                    </ul>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Launch Year:</label>
+                                    <span class="value">2006</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Launch:</label>
+                                    <span class="value">{Launch_success}</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Landing:</label>
+                                    <span class="value">{Launch Landing}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-3 mb-3 border-0">
+                            <div class="card-header text-center img-box">
+                                <img src="https://images2.imgbox.com/3c/0e/T8iJcSN3_o.png" alt="img1" class="mission-img"/>
+                            </div>
+                            <div class="card-body p-0 border-0">
+                                <div class="card-title">DemoSat #2</div>
+                                <div class="mission-ids">
+                                    <label>Mission Ids:</label>
+                                    <ul>
+                                        <li>{list mission ids}</li>
+                                    </ul>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Launch Year:</label>
+                                    <span class="value">2006</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Launch:</label>
+                                    <span class="value">{Launch_success}</span>
+                                </div>
+                                <div class="label-value-block">
+                                    <label class="label">Successful Landing:</label>
+                                    <span class="value">{Launch Landing}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+        <footer class="text-center py-3"><strong>Developed by:</strong> Hareesh Sapparad</footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

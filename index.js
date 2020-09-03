@@ -95,6 +95,7 @@ export const spacex = (() => {
     }
 
     function loadData(url){
+        setLoading(true);
         fetch(url).then(response => {
             response.json().then(result => {
                 populateCards(result);
@@ -103,7 +104,7 @@ export const spacex = (() => {
     }
 
     function populateCards(programList){
-        setLoading(true);
+        
         if(programList && programList.length > 0){
             setLoading(false);
             programList.forEach(program => {

@@ -1,6 +1,5 @@
-(() => {
-    
-    console.log("spacex");
+
+export const spacex = (() => {
 
     const API_URL_BASE = 'https://api.spacexdata.com/v3/launches';
     const QN_MARK = '?';
@@ -12,35 +11,41 @@
     let byLaunchSuccess = '';
     let bySuccessLanding = '';
 
-    loadData(API_URL_FIRST_100);
-
-    const launchYearButtons = document.querySelectorAll('.launch-year-button-group button');
-    const launchSuccessButtons = document.querySelectorAll('.launch-success-button-group button');
-    const successLandingButtons = document.querySelectorAll('.success-landing-button-group button');
-
-    if(launchYearButtons && launchYearButtons.length > 0){
-        launchYearButtons.forEach(button => {
-            button.addEventListener('click', (btn) => {
-                addActive(launchYearButtons, btn);
-                filterByLaunchYear(btn.target.textContent);
-            });
-        })
+    function init(){
+        console.log("spacex intiated");
+        loadData(API_URL_FIRST_100);
+        addEventListeners();
     }
-    if(launchSuccessButtons && launchSuccessButtons.length > 0){
-        launchSuccessButtons.forEach(button => {
-            button.addEventListener('click', (btn) => {
-                addActive(launchSuccessButtons, btn);
-                filterByLaunchSuccess(btn.target.textContent);
-            });
-        })
-    }
-    if(successLandingButtons && successLandingButtons.length > 0){
-        successLandingButtons.forEach(button => {
-            button.addEventListener('click', (btn) => {
-                addActive(successLandingButtons, btn);
-                filterBySuccssLanding(btn.target.textContent);
-            });
-        })
+
+    function addEventListeners() {
+        const launchYearButtons = document.querySelectorAll('.launch-year-button-group button');
+        const launchSuccessButtons = document.querySelectorAll('.launch-success-button-group button');
+        const successLandingButtons = document.querySelectorAll('.success-landing-button-group button');
+    
+        if(launchYearButtons && launchYearButtons.length > 0){
+            launchYearButtons.forEach(button => {
+                button.addEventListener('click', (btn) => {
+                    addActive(launchYearButtons, btn);
+                    filterByLaunchYear(btn.target.textContent);
+                });
+            })
+        }
+        if(launchSuccessButtons && launchSuccessButtons.length > 0){
+            launchSuccessButtons.forEach(button => {
+                button.addEventListener('click', (btn) => {
+                    addActive(launchSuccessButtons, btn);
+                    filterByLaunchSuccess(btn.target.textContent);
+                });
+            })
+        }
+        if(successLandingButtons && successLandingButtons.length > 0){
+            successLandingButtons.forEach(button => {
+                button.addEventListener('click', (btn) => {
+                    addActive(successLandingButtons, btn);
+                    filterBySuccssLanding(btn.target.textContent);
+                });
+            })
+        }
     }
 
     function addActive(btnList, btn){
@@ -55,7 +60,7 @@
 
     function filterByLaunchYear(year){
         byYear = '&launch_year=' + year;
-        url = `${API_URL_FIRST_100}${byYear}`
+        let url = `${API_URL_FIRST_100}${byYear}`
         if(byLaunchSuccess){
             url += byLaunchSuccess
         }
@@ -67,7 +72,7 @@
 
     function filterByLaunchSuccess(val){
         byLaunchSuccess = '&launch_success=' + ((val === 'True') ? 'true' : 'false');
-        url = `${API_URL_FIRST_100}${byLaunchSuccess}`
+        let url = `${API_URL_FIRST_100}${byLaunchSuccess}`
         if(bySuccessLanding){
             url += bySuccessLanding
         }
@@ -79,7 +84,7 @@
 
     function filterBySuccssLanding(val){
         bySuccessLanding = '&land_success=' + ((val === 'True') ? 'true' : 'false');
-        url = `${API_URL_FIRST_100}${bySuccessLanding}`
+        let url = `${API_URL_FIRST_100}${bySuccessLanding}`
         if(byLaunchSuccess){
             url += byLaunchSuccess
         }
@@ -167,6 +172,10 @@
             </div>
         `;
         return cardEl;
+    }
+
+    return {
+        init: init
     }
   
 })();

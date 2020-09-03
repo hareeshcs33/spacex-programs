@@ -108,7 +108,9 @@ export const spacex = (() => {
         if(programList && programList.length > 0){
             setLoading(false);
             programList.forEach(program => {
-                targetEl.appendChild(getCard(program));
+                setTimeout(() => {
+                    targetEl.appendChild(getCard(program));
+                });
             });
             
         } else {

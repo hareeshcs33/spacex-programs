@@ -148,10 +148,10 @@ export const spacex = (() => {
         cardEl.innerHTML = `
             <div class="card p-3 mb-3 border-0">
                 <div class="card-header text-center img-box">
-                    <img src="${program.links.mission_patch_small}" alt="${program.mission_name}" class="mission-img"/>
+                    <img src="${program.links.mission_patch_small ? program.links.mission_patch_small : 'https://images2.imgbox.com/d9/3e/FfrN88ry_o.png'}" alt="${program.mission_name}" class="mission-img"/>
                 </div>
                 <div class="card-body p-0">
-                    <div class="card-title">${program.mission_name} #${program.flight_number}</div>
+                    <div class="card-title"><div class="mission-name">${program.mission_name}</div> #${program.flight_number}</div>
                     <div class="mission-ids">
                         <label>Mission Ids:</label>
                         <ul>

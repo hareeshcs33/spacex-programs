@@ -28,12 +28,6 @@ body {
     padding: 0 7.5px;
 }
 
-@media (max-width: 576px) {
-    [class*=col-] {
-        padding: 0;
-    }
-}
-
 .launch-title {
     border-bottom: 1px solid #a3a3a3;
     margin: 0 15px 10px 15px;
@@ -83,8 +77,16 @@ body {
     color: #2187c1;
     font-size: 14px;
     font-weight: bold;
+    display: flex;
     margin-bottom: 5px;
     padding: 0;
+}
+.mission-name {
+    flex: 0 1 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 4px;
 }
 
 .mission-ids label {
@@ -102,5 +104,17 @@ body {
 
 .label-value-block .value {
     color: #2187c1;
-    font-size: 13px;
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+    .launch-cta > div,
+    .launch-cta > div:nth-child(even) {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    [class*=col-] {
+        padding: 0;
+    }
 }

@@ -5,6 +5,12 @@
 4. The page is hosted on Github pages.
 Live demo: https://hareeshcs33.github.io/spacex-programs/
 
-Performance matrix
+<img src="/screenshots/Screenshot-desktop.png" alt="desktop-view">
+<img src="/screenshots/Screenshot-ipadpro.png" alt="ipad-view">
+<img src="/screenshots/Screenshot-mob-1.png.png" alt="mob-view">
+<img src="/screenshots/Screenshot-mob-2.png" alt="mob-view">
+
+Performance matrix: 
+<img src="/screenshots/Perf-1.png" alt="Performance">
 https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fhareeshcs33.github.io%2Fspacex-programs%2Findex.html
 https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhareeshcs33.github.io%2Fspacex-programs%2Findex.html&tab=desktop

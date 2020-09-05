@@ -57,11 +57,13 @@ body {
     border: 0;
     margin: 0 auto 10px;
     padding: 10px;
+    height: 200px;
 }
 
 .img-box .mission-img {
     display: block;
-    width: 100%;
+    width: auto;
+    height: 100%;
 }
 
 .mission-ids ul {

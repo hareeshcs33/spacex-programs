@@ -7,7 +7,7 @@ Live demo: https://hareeshcs33.github.io/spacex-programs/
 
 <img src="/screenshots/Screenshot-desktop.png" alt="desktop-view">
 <img src="/screenshots/Screenshot-ipadpro.png" alt="ipad-view">
-<img src="/screenshots/Screenshot-mob-1.png.png" alt="mob-view">
+<img src="/screenshots/Screenshot-mob-1.png" alt="mob-view">
 <img src="/screenshots/Screenshot-mob-2.png" alt="mob-view">
 
 Performance matrix: 
